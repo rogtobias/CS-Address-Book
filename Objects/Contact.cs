@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace AddressBookProject.Objects
 {
-  public class AddressBook
+  public class Contact
   {
     private string _name;
     private string _address;
@@ -10,9 +10,9 @@ namespace AddressBookProject.Objects
     private string _state;
     private int _zipCode;
     private int _id;
-    private static List<AddressBook> _instances = new List<AddressBook> {};
+    private static List<Contact> _instances = new List<Contact> {};
 
-    public AddressBook(string name, string addressNumber, string city, string state, int zipCode)
+    public Contact(string name, string addressNumber, string city, string state, int zipCode)
     {
       _name = name;
       _address = address;
@@ -68,7 +68,7 @@ namespace AddressBookProject.Objects
       _zipCode = zipCode;
     }
 
-    public static List<AddressBook> GetAll()
+    public static List<Contact> GetAll()
     {
       return _instances;
     }
@@ -80,7 +80,7 @@ namespace AddressBookProject.Objects
     {
       _instances.Clear();
     }
-    public static AddressBook SearchAddressBooks(int searchId)
+    public static Contact SearchContacts(int searchId)
     {
       return _instances[searchId];
     }
