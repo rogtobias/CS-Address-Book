@@ -9,16 +9,18 @@ namespace AddressBookProject.Objects
     private string _city;
     private string _state;
     private int _zipCode;
+    private string _image;
     private int _id;
     private static List<Contact> _instances = new List<Contact> {};
 
-    public Contact(string name, string address, string city, string state, int zipCode)
+    public Contact(string name, string address, string city, string state, int zipCode, string image)
     {
       _name = name;
       _address = address;
       _city = city;
       _state = state;
       _zipCode = zipCode;
+      _image = image;
       _id = _instances.Count;
       _instances.Add(this);
     }
@@ -66,6 +68,15 @@ namespace AddressBookProject.Objects
     public void SetZipCode(int zipCode)
     {
       _zipCode = zipCode;
+    }
+
+    public string GetImage()
+    {
+      return _image;
+    }
+    public void SetImage(string image)
+    {
+      _image = image;
     }
 
     public int GetId()

@@ -15,7 +15,8 @@ namespace AddressBookObject
                                           Request.Form["address"],
                                           Request.Form["city"],
                                           Request.Form["state"],
-                                          Request.Form["zipCode"]);
+                                          Request.Form["zipCode"],
+                                          Request.Form["image"]);
         return View["index.cshtml", Contact.GetAll()];
       };
       Post["/contacts/cleared"] = _ => {
