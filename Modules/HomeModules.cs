@@ -1,6 +1,6 @@
 using Nancy;
 using System.Collections.Generic;
-using CDOrganizerProject.Objects;
+using AddressBookProject.Objects;
 
 namespace AddressBookObject
 {
@@ -23,7 +23,7 @@ namespace AddressBookObject
         return View["addresses_cleared.cshtml"];
       };
       Get["/contacts/{id}"] = parameters => {
-        return View["all_addresses.cshtml", Contact.SearchContacts(parameters.id)];
+        return View["address_details.cshtml", Contact.SearchContacts(parameters.id)];
       };
       Post["/contacts/{id}"] = parameters => {
         Contact contact = Contact.SearchContacts(parameters.id);

@@ -12,13 +12,13 @@ namespace AddressBookProject.Objects
     private int _id;
     private static List<Contact> _instances = new List<Contact> {};
 
-    public Contact(string name, string addressNumber, string city, string state, int zipCode)
+    public Contact(string name, string address, string city, string state, int zipCode)
     {
       _name = name;
       _address = address;
       _city = city;
       _state = state;
-      _zipCode = zipCode
+      _zipCode = zipCode;
       _id = _instances.Count;
       _instances.Add(this);
     }
@@ -66,6 +66,11 @@ namespace AddressBookProject.Objects
     public void SetZipCode(int zipCode)
     {
       _zipCode = zipCode;
+    }
+
+    public int GetId()
+    {
+      return _id;
     }
 
     public static List<Contact> GetAll()
