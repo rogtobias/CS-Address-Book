@@ -1,0 +1,16 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h2>@Model.GetName()</h2>
+<ul>
+  <li>Address: @Model.GetAddress()</li>
+  <li>City: @Model.GetCity()</li>
+  <li>State: @Model.GetState()</li>
+  <li>Zip: @Model.GetZipCode()</li>
+
+</ul>
+<form action="/addressBooks/@Model.GetId()" method="post">
+  <button type="submit">DELETE THIS ADDRESS</button>
+</form>
+<p><a href="/">Back to homepage.</a></p>
